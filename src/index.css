@@ -12,12 +12,27 @@ code {
     monospace;
 }
 
-h1, h2, h3 {
-  font-family: 'Roboto Condensed', sans-serif;;
+h1, h2, h3, h4 {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: -1px;
 }
 
 p {
   font-family: 'Roboto', sans-serif;;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.grey-background {
+  background-color: #FBFBFB;
+}
+
+input {
+outline: none;
+box-shadow:none !important;
+border:1px solid #ccc !important;
 }
 
 /*Navbar Override*/
