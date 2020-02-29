@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1, h2, h3 {
+  font-family: 'Roboto Condensed', sans-serif;;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;;
+}
+
+/*Navbar Override*/
+
+.dropdown-toggle.nav-link {
+  color: black !important;
+  font-family: 'PT Sans';
+  letter-spacing: 0.5px;
+  :hover {
+    color: #00CEBC !important;
+  }
+}
+
+.dropdown-toggle.nav-link {
+  color: black !important;
+  font-family: 'PT Sans';
+  letter-spacing: 0.5px;
+  :hover {
+    color: #00CEBC !important;
+  }
+}
+
+.dropdown-toggle::after {
+  color: #00CDBC;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 15px;
+}
