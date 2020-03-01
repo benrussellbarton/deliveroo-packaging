@@ -1,14 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
-import EssentialsCrop from '../images/packaging-essentials-crop.png';
-import SignageCrop from '../images/signage-crop.png';
-import CuisineCrop from '../images/shop-by-cuisine-crop.png';
-import TypeCrop from '../images/shop-by-type-crop.png';
-import Essentials from '../images/packaging-essentials.jpg';
-import Signage from '../images/signage.jpg';
-import Cuisine from '../images/shop-by-cuisine.jpg';
-import Type from '../images/shop-by-type.jpg';
+import EssentialsCrop from '../images/shop/packaging-essentials-crop.png';
+import SignageCrop from '../images/shop/signage-crop.png';
+import CuisineCrop from '../images/shop/shop-by-cuisine-crop.png';
+import TypeCrop from '../images/shop/shop-by-type-crop.png';
+import Essentials from '../images/shop/packaging-essentials-mob.png';
+import Signage from '../images/shop/signage-mob.png';
+import Cuisine from '../images/shop/shop-by-cuisine-mob.png';
+import Type from '../images/shop/shop-by-type-mob.png';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Heading = styled.h3`
@@ -108,6 +108,21 @@ const Card = styled.div`
   }
 `
 
+const CardXS = styled.div`
+  padding: 10px 30px 30px 30px;
+`
+
+const CardShadowXS = styled.div`
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-bottom: 30px;
+`
+
+const MobileCardImage = styled.div`
+  height: 220px;
+`
+
 function ShopSection() {
   return (
     <div>
@@ -116,18 +131,18 @@ function ShopSection() {
           <Row className='justify-content-center'>
             <Col lg='8' xl='6'>
               <Card style={ EssentialsBackground }>
-                <Heading className="d-block d-sm-none d-md-block d-xl-none">Packaging Essentials</Heading>
-                <Heading className="d-none d-sm-block d-md-none d-xl-block">Packaging<br />Essentials</Heading>
-                <a href="https://deliveroo-packaging.com/cart">
+                <Heading className='d-block d-sm-none d-md-block d-xl-none'>Packaging Essentials</Heading>
+                <Heading className='d-none d-sm-block d-md-none d-xl-block'>Packaging<br />Essentials</Heading>
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>All essentials</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Best sellers</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>New in</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/all">
+                <a href='https://deliveroo-packaging.com/collections/all'>
                   <ViewAll>View all</ViewAll>
                 </a>
               </Card>
@@ -135,25 +150,25 @@ function ShopSection() {
             <Col lg='8' xl='6'>
               <Card style={ TypeBackground }>
                 <Heading>Shop by Type</Heading>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Burger / Chips solutions</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Pizza boxes</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Hot food - board</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Hot food - plastic</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Soup / hot liquid containers</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Salad bowls and portion pots</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/all">
+                <a href='https://deliveroo-packaging.com/collections/all'>
                   <ViewAll>View all</ViewAll>
                 </a>
               </Card>
@@ -161,25 +176,25 @@ function ShopSection() {
             <Col lg='8' xl='6'>
               <Card style={ CuisineBackground }>
                 <Heading>Shop by Cuisine</Heading>
-                <a href="https://deliveroo-packaging.com/collections/american-burgers">
+                <a href='https://deliveroo-packaging.com/collections/american-burgers'>
                   <ListItem>American / Burgers</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/pan-asian">
+                <a href='https://deliveroo-packaging.com/collections/pan-asian'>
                   <ListItem>Pan-Asian</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/italian-pasta-pizza">
+                <a href='https://deliveroo-packaging.com/collections/italian-pasta-pizza'>
                   <ListItem>Italian / Pasta / Pizza</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/british">
+                <a href='https://deliveroo-packaging.com/collections/british'>
                   <ListItem>British</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/mexican">
+                <a href='https://deliveroo-packaging.com/collections/mexican'>
                   <ListItem>Mexican / Tacos</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/middle-eastern-food">
+                <a href='https://deliveroo-packaging.com/collections/middle-eastern-food'>
                   <ListItem>Middle-eastern food</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/all">
+                <a href='https://deliveroo-packaging.com/collections/all'>
                   <ViewAll>View all</ViewAll>
                 </a>
               </Card>
@@ -187,13 +202,13 @@ function ShopSection() {
             <Col lg='8' xl='6'>
               <Card style={ SignageBackground }>
                 <Heading>Signage</Heading>
-                <a href="https://deliveroo-packaging.com/collections/internal-signage">
+                <a href='https://deliveroo-packaging.com/collections/internal-signage'>
                   <ListItem>Internal Signage</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/external-signage">
+                <a href='https://deliveroo-packaging.com/collections/external-signage'>
                   <ListItem>External Signage</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/signage">
+                <a href='https://deliveroo-packaging.com/collections/signage'>
                   <ViewAll>View all</ViewAll>
                 </a>
               </Card>
@@ -205,89 +220,101 @@ function ShopSection() {
       <Section className='grey-background d-xs-block d-sm-none'>
         <Container>
           <Row className='justify-content-center text-center'>
-            <Col lg='8' xl='6'>
-              <Card style={ EssentialsBackgroundMobile }>
-                <Heading className="d-block d-sm-none d-md-block d-xl-none">Packaging Essentials</Heading>
-                <Heading className="d-none d-sm-block d-md-none d-xl-block">Packaging<br />Essentials</Heading>
-                <a href="https://deliveroo-packaging.com/cart">
+            <Col xs='12'>
+            <CardShadowXS>
+              <MobileCardImage style={ EssentialsBackgroundMobile }></MobileCardImage>
+              <CardXS>
+                <Heading className='d-block d-sm-none d-md-block d-xl-none'>Packaging Essentials</Heading>
+                <Heading className='d-none d-sm-block d-md-none d-xl-block'>Packaging<br />Essentials</Heading>
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>All essentials</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Best sellers</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/cart">
+                <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>New in</ListItem>
                 </a>
-                <a href="https://deliveroo-packaging.com/collections/all">
+                <a href='https://deliveroo-packaging.com/collections/all'>
                   <ViewAll>View all</ViewAll>
                 </a>
-              </Card>
+              </CardXS>
+            </CardShadowXS>
             </Col>
-            <Col lg='8' xl='6'>
-              <Card style={ TypeBackgroundMobile }>
-                <Heading>Shop by Type</Heading>
-                <a href="https://deliveroo-packaging.com/cart">
-                  <ListItem>Burger / Chips solutions</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/cart">
-                  <ListItem>Pizza boxes</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/cart">
-                  <ListItem>Hot food - board</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/cart">
-                  <ListItem>Hot food - plastic</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/cart">
-                  <ListItem>Soup / hot liquid containers</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/cart">
-                  <ListItem>Salad bowls and portion pots</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/all">
-                  <ViewAll>View all</ViewAll>
-                </a>
-              </Card>
+            <Col xs='12'>
+              <CardShadowXS>
+                <MobileCardImage style={ TypeBackgroundMobile }></MobileCardImage>
+                <CardXS>
+                  <Heading>Shop by Type</Heading>
+                  <a href='https://deliveroo-packaging.com/cart'>
+                    <ListItem>Burger / Chips solutions</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/cart'>
+                    <ListItem>Pizza boxes</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/cart'>
+                    <ListItem>Hot food - board</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/cart'>
+                    <ListItem>Hot food - plastic</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/cart'>
+                    <ListItem>Soup / hot liquid containers</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/cart'>
+                    <ListItem>Salad bowls and portion pots</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/all'>
+                    <ViewAll>View all</ViewAll>
+                  </a>
+                </CardXS>
+              </CardShadowXS>
             </Col>
-            <Col lg='8' xl='6'>
-              <Card style={ CuisineBackgroundMobile }>
-                <Heading>Shop by Cuisine</Heading>
-                <a href="https://deliveroo-packaging.com/collections/american-burgers">
-                  <ListItem>American / Burgers</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/pan-asian">
-                  <ListItem>Pan-Asian</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/italian-pasta-pizza">
-                  <ListItem>Italian / Pasta / Pizza</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/british">
-                  <ListItem>British</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/mexican">
-                  <ListItem>Mexican / Tacos</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/middle-eastern-food">
-                  <ListItem>Middle-eastern food</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/all">
-                  <ViewAll>View all</ViewAll>
-                </a>
-              </Card>
+            <Col xs='12'>
+              <CardShadowXS>
+                <MobileCardImage style={ CuisineBackgroundMobile }></MobileCardImage>
+                <CardXS>
+                  <Heading>Shop by Cuisine</Heading>
+                  <a href='https://deliveroo-packaging.com/collections/american-burgers'>
+                    <ListItem>American / Burgers</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/pan-asian'>
+                    <ListItem>Pan-Asian</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/italian-pasta-pizza'>
+                    <ListItem>Italian / Pasta / Pizza</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/british'>
+                    <ListItem>British</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/mexican'>
+                    <ListItem>Mexican / Tacos</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/middle-eastern-food'>
+                    <ListItem>Middle-eastern food</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/all'>
+                    <ViewAll>View all</ViewAll>
+                  </a>
+                </CardXS>
+              </CardShadowXS>
             </Col>
-            <Col lg='8' xl='6'>
-              <Card style={ SignageBackgroundMobile }>
-                <Heading>Signage</Heading>
-                <a href="https://deliveroo-packaging.com/collections/internal-signage">
-                  <ListItem>Internal Signage</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/external-signage">
-                  <ListItem>External Signage</ListItem>
-                </a>
-                <a href="https://deliveroo-packaging.com/collections/signage">
-                  <ViewAll>View all</ViewAll>
-                </a>
-              </Card>
+            <Col xs='12'>
+              <CardShadowXS>
+                <MobileCardImage style={ SignageBackgroundMobile }></MobileCardImage>
+                <CardXS>
+                  <Heading>Signage</Heading>
+                  <a href='https://deliveroo-packaging.com/collections/internal-signage'>
+                    <ListItem>Internal Signage</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/external-signage'>
+                    <ListItem>External Signage</ListItem>
+                  </a>
+                  <a href='https://deliveroo-packaging.com/collections/signage'>
+                    <ViewAll>View all</ViewAll>
+                  </a>
+                </CardXS>
+              </CardShadowXS>
             </Col>
           </Row>
         </Container>

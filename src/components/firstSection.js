@@ -1,9 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
-import TruckCircle from '../images/truck-circle.png';
-import PoundCircle from '../images/pound-circle.png';
-import BinCircle from '../images/bin-circle.png';
+import TruckCircle from '../images/banners/truck-circle.png';
+import PoundCircle from '../images/banners/pound-circle.png';
+import BinCircle from '../images/banners/bin-circle.png';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const CircleStyle = styled.img`
@@ -21,16 +21,22 @@ const Heading = styled.h2`
 `
 
 const SubHeading = styled.p`
-  color: #828585;
+  color: #2D3333;
+  fontFamily: 'PT Sans';
+  font-size: 0.9em;
+  padding: 0 50px;
+  @media (max-width: 1200px) {
+    padding: 0;
+  }
 `
 
 const Section = styled.div`
-  padding: 150px 0 50px 0;
+  padding: 180px 0 50px 0;
   @media (min-width: 992px) {
     padding-top: 70px;
   }
   @media (max-width: 800px) {
-    padding: 40px 0;
+    padding-top: 80px;
   }
 `
 
@@ -42,12 +48,14 @@ function FirstSection() {
           <Row className='justify-content-center text-center'>
             <Col md='4'>
               <CircleStyle src={ TruckCircle } alt='Free Delivery' />
-              <Heading>Free delivery</Heading>
+              <Heading className='d-md-none d-lg-block'>Free delivery</Heading>
+              <Heading className='d-none d-md-block d-lg-none'>Free <br />delivery</Heading>
               <SubHeading>We offer next day delivery as standard</SubHeading>
             </Col>
             <Col md='4'>
               <CircleStyle src={ PoundCircle } alt='Price Promise' />
-              <Heading>Price promise</Heading>
+              <Heading className='d-md-none d-lg-block'>Price promise</Heading>
+              <Heading className='d-none d-md-block d-lg-none'>Price <br />promise</Heading>
               <SubHeading>Any profit we make we put back into giving you better pricing</SubHeading>
             </Col>
             <Col md='4'>

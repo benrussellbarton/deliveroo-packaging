@@ -1,9 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
-import SampleImage from '../images/search.jpg';
+import SampleImage from '../images/banners/search.jpg';
 import Search from '../images/nav/search.png';
-import GreenBodyBackground from '../images/background-bottom.svg';
+import GreenBodyBackground from '../images/banners/background-bottom.svg';
 import { Container, Row, Col, InputGroup, FormControl } from 'react-bootstrap';
 
 const Heading = styled.h2`
@@ -64,12 +64,12 @@ function SearchBanner() {
             <Col>
               <Box style={ Background }>
                 <Heading>Now go and find what you need...</Heading>
-                <label style={ Label } className="w-75">
+                <label style={ Label } className='w-75'>
                   <InputGroup>
-                    <FormControl placeholder="What are you looking for?" aria-label="Search" aria-describedby="Search" />
+                    <FormControl placeholder='What are you looking for?' aria-label='Search' aria-describedby='Search' />
                     <InputGroup.Append>
-                      <InputGroup.Text id="Search" style={ GreenBackground }>
-                        <a href="/">
+                      <InputGroup.Text id='Search' style={ GreenBackground }>
+                        <a href='/'>
                           <SearchStyle src={ Search } alt='Magnifying Glass' />
                         </a>
                       </InputGroup.Text>

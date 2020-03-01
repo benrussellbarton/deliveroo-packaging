@@ -61,3 +61,11 @@ border:1px solid #ccc !important;
   position: absolute;
   bottom: 15px;
 }
+
+.navbar-toggler.collapsed {
+  margin-right: 18px;
+}
+
+.navbar-toggler {
+  margin-right: 18px;
+}

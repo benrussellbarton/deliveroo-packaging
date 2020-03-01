@@ -30,14 +30,14 @@ const NavText = styled.p`
   letter-spacing: 0.5px;
   margin: 0 0 0 30px;
   color: black;
-  :hover {
-    color: #00CEBC;
-  }
 `
 
 const NavLogo = styled.img`
   height: 32px;
   margin: 0;
+  @media (max-width: 992px) {
+    margin-left: 18px;
+  }
 `
 
 const NavLink  = {
@@ -70,6 +70,13 @@ const LoginLink  = styled.div`
   }
 `
 
+const Translate  = styled.div`
+  transition: transform 0.4s;
+  :hover {
+    transform: translate(0, -4px);
+  }
+`
+
 const CartStyle = styled.img`
   max-height: 20px;
   margin: 10px 0 0 30px;
@@ -80,83 +87,89 @@ const CartStyle = styled.img`
 
 function Navigation() {
   return (
-    <Container>
-      <Navbar collapseOnSelect expand="lg" variant="light" style={ NavbarStyle }>
-        <Navbar.Brand href="/">
-          <NavLogo src={ Logo } className="logo" alt="Deliveroo Logo" />
+    <div>
+      <Navbar fixed='top' collapseOnSelect expand='lg' variant='light' style={ NavbarStyle }>
+      <Container>
+        <Navbar.Brand href='/'>
+          <NavLogo src={ Logo } className='logo' alt='Deliveroo Logo' />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto">
-            {/* Shop Mobile */}
-            <div className="d-block d-lg-none">
-              <Nav.Link href="https://deliveroo-packaging.com/collections/all" style={ NavLink }>
-                <NavText>Shop</NavText>
-              </Nav.Link>
-            </div>
-            {/* Desktop Nav */}
-            <label style={ Label } className="d-none d-lg-block">
-              <InputGroup>
-                <FormControl placeholder="What are you looking for?" aria-label="Search" aria-describedby="Search" />
-                <InputGroup.Append>
-                  <InputGroup.Text id="Search" style={ GreenBackground }>
-                    <a href="/">
-                      <SearchStyle src={ Search } alt='Magnifying Glass' />
-                    </a>
-                  </InputGroup.Text>
-                </InputGroup.Append>
-              </InputGroup>
-            </label>
-            <NavDropdown className="d-none d-lg-block" title="Shop" id="basic-nav-dropdown">
-              <NavDropdown.Item href="https://deliveroo-packaging.com/collections/all-essentials">
-                <DropdownText>Packaging Essentials</DropdownText>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://deliveroo-packaging.com/pages/packaging-types">
-                <DropdownText>Type</DropdownText>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://deliveroo-packaging.com/collections/eco-packaging">
-                <DropdownText>Eco</DropdownText>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://deliveroo-packaging.com/pages/shop-by-cuisine">
-                <DropdownText>Cuisine</DropdownText>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://deliveroo-packaging.com/collections/deliveroo-branded">
-                <DropdownText>Deliveroo Branded</DropdownText>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://deliveroo-packaging.com/collections/signage">
-                <DropdownText>Signage</DropdownText>
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="https://deliveroo-packaging.com/pages/free-samples" style={ NavLink }>
-              <NavText>Samples</NavText>
-            </Nav.Link>
-            <Nav.Link href="https://deliveroo-packaging.com/blogs/helpful-hints" style={ NavLink }>
-              <NavText>Help</NavText>
-            </Nav.Link>
-            <a href="https://deliveroo-packaging.com/cart">
-              <CartStyle src={ Cart } className="d-none d-lg-block" alt='48h Delivery' />
-            </a>
-            {/* Cart and Login Mobile */}
-            <div className="d-block d-lg-none">
-              <Nav.Link href="https://deliveroo-packaging.com/cart" style={ NavLink }>
-                <NavText>Cart</NavText>
-              </Nav.Link>
-            </div>
-            <div className="d-block d-lg-none">
-              <Nav.Link href="https://deliveroo-packaging.com/account/login" style={ NavLink }>
-                <NavText>Log in</NavText>
-              </Nav.Link>
-            </div>
-            {/* Cart and Login Mobile END */}
-            <LoginLink className="d-none d-lg-block">
-              <Nav.Link href="https://deliveroo-packaging.com/account/login">
-                <LoginText>Log in</LoginText>
-              </Nav.Link>
-            </LoginLink>
-          </Nav>
-        </Navbar.Collapse>
+        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav'>
+            <Nav className='ml-auto'>
+              {/* Shop Mobile */}
+              <Translate className='d-block d-lg-none'>
+                <Nav.Link href='https://deliveroo-packaging.com/collections/all' style={ NavLink }>
+                  <NavText>Shop</NavText>
+                </Nav.Link>
+              </Translate>
+              {/* Desktop Nav */}
+              <label style={ Label } className='d-none d-lg-block'>
+                <InputGroup>
+                  <FormControl placeholder='What are you looking for?' aria-label='Search' aria-describedby='Search' />
+                  <InputGroup.Append>
+                    <InputGroup.Text id='Search' style={ GreenBackground }>
+                      <a href='/'>
+                        <SearchStyle src={ Search } alt='Magnifying Glass' />
+                      </a>
+                    </InputGroup.Text>
+                  </InputGroup.Append>
+                </InputGroup>
+              </label>
+              <NavDropdown className='d-none d-lg-block' title='Shop' id='basic-nav-dropdown'>
+                <NavDropdown.Item href='https://deliveroo-packaging.com/collections/all-essentials'>
+                  <DropdownText>Packaging Essentials</DropdownText>
+                </NavDropdown.Item>
+                <NavDropdown.Item href='https://deliveroo-packaging.com/pages/packaging-types'>
+                  <DropdownText>Type</DropdownText>
+                </NavDropdown.Item>
+                <NavDropdown.Item href='https://deliveroo-packaging.com/collections/eco-packaging'>
+                  <DropdownText>Eco</DropdownText>
+                </NavDropdown.Item>
+                <NavDropdown.Item href='https://deliveroo-packaging.com/pages/shop-by-cuisine'>
+                  <DropdownText>Cuisine</DropdownText>
+                </NavDropdown.Item>
+                <NavDropdown.Item href='https://deliveroo-packaging.com/collections/deliveroo-branded'>
+                  <DropdownText>Deliveroo Branded</DropdownText>
+                </NavDropdown.Item>
+                <NavDropdown.Item href='https://deliveroo-packaging.com/collections/signage'>
+                  <DropdownText>Signage</DropdownText>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Translate>
+                <Nav.Link href='https://deliveroo-packaging.com/pages/free-samples' style={ NavLink }>
+                  <NavText>Samples</NavText>
+                </Nav.Link>
+              </Translate>
+              <Translate>
+                <Nav.Link href='https://deliveroo-packaging.com/blogs/helpful-hints' style={ NavLink }>
+                  <NavText>Help</NavText>
+                </Nav.Link>
+              </Translate>
+              <a href='https://deliveroo-packaging.com/cart'>
+                <CartStyle src={ Cart } className='d-none d-lg-block' alt='48h Delivery' />
+              </a>
+              {/* Cart and Login Mobile */}
+              <Translate className='d-block d-lg-none'>
+                <Nav.Link href='https://deliveroo-packaging.com/cart' style={ NavLink }>
+                  <NavText>Cart</NavText>
+                </Nav.Link>
+              </Translate>
+              <Translate className='d-block d-lg-none'>
+                <Nav.Link href='https://deliveroo-packaging.com/account/login' style={ NavLink }>
+                  <NavText>Log in</NavText>
+                </Nav.Link>
+              </Translate>
+              {/* Cart and Login Mobile END */}
+              <LoginLink className='d-none d-lg-block'>
+                <Nav.Link href='https://deliveroo-packaging.com/account/login'>
+                  <LoginText>Log in</LoginText>
+                </Nav.Link>
+              </LoginLink>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
       </Navbar>
-    </Container>
+    </div>
   );
 }
 

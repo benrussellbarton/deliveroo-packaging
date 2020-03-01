@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
-import SampleImage from '../images/sample.jpg';
+import SampleImage from '../images/banners/sample.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Heading = styled.h2`
@@ -55,9 +55,9 @@ function SampleBanner() {
           <Row>
             <Col>
               <Box style={ Background }>
-                <Heading className="d-none d-lg-block">Test us out with free samples</Heading>
-                <Heading className="d-lg-none">Test us out with <br />free samples</Heading>
-                <a href="https://deliveroo-packaging.com/pages/free-samples">
+                <Heading className='d-none d-lg-block'>Test us out with free samples</Heading>
+                <Heading className='d-lg-none'>Test us out with <br />free samples</Heading>
+                <a href='https://deliveroo-packaging.com/pages/free-samples'>
                   <GreenButton>Order here</GreenButton>
                 </a>
               </Box>
