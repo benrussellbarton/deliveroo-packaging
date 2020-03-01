@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './components/navbar.js';
 import Landing from './components/landing.js';
-import FirstSection from './components/firstSection.js';
+import FreeDeliverySection from './components/freeDeliverySection.js';
 import ShopSection from './components/shopSection.js';
 import SampleBanner from './components/sampleBanner.js';
 import GoToSection from './components/goToSection.js';
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Navigation />
       <Landing />
-      <FirstSection />
+      <FreeDeliverySection />
       <ShopSection />
       <SampleBanner />
       <GoToSection />

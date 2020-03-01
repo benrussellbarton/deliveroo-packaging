@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../images/nav/deliveroo.svg';
-import Cart from '../images/nav/cart.jpg';
-import Search from '../images/nav/search.png';
+import CartImage from '../images/nav/cart.jpg';
+import MagnifyingGlass from '../images/nav/search.png';
 import { Navbar, Nav, Container, NavDropdown, InputGroup, FormControl } from 'react-bootstrap';
 import styled from 'styled-components';
 
@@ -11,7 +11,7 @@ const Label  = {
   fontFamily: 'PT Sans'
 };
 
-const SearchStyle = styled.img`
+const Search = styled.img`
   max-width: 17px;
   padding-bottom: 3px;
 `
@@ -77,7 +77,7 @@ const Translate  = styled.div`
   }
 `
 
-const CartStyle = styled.img`
+const Cart = styled.img`
   max-height: 20px;
   margin: 10px 0 0 30px;
   :hover {
@@ -109,7 +109,7 @@ function Navigation() {
                   <InputGroup.Append>
                     <InputGroup.Text id='Search' style={ GreenBackground }>
                       <a href='/'>
-                        <SearchStyle src={ Search } alt='Magnifying Glass' />
+                        <Search src={ MagnifyingGlass } alt='Magnifying Glass' />
                       </a>
                     </InputGroup.Text>
                   </InputGroup.Append>
@@ -146,7 +146,7 @@ function Navigation() {
                 </Nav.Link>
               </Translate>
               <a href='https://deliveroo-packaging.com/cart'>
-                <CartStyle src={ Cart } className='d-none d-lg-block' alt='48h Delivery' />
+                <Cart src={ CartImage } className='d-none d-lg-block' alt='48h Delivery' />
               </a>
               {/* Cart and Login Mobile */}
               <Translate className='d-block d-lg-none'>

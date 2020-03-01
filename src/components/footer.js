@@ -38,6 +38,7 @@ const Link = styled.p`
   padding: 0 10px 0 0;
   :hover {
     color: #00CEBC;
+    cursor: pointer;
   }
 `
 

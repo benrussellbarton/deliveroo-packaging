@@ -2,14 +2,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import Truck from '../images/landing/truck-green.png';
+import TruckImage from '../images/landing/truck-green.png';
 import Background from '../images/landing/background.svg';
 import PackageMobile from '../images/landing/food-packaging-mobile.png';
 import EcoPackageMobile from '../images/landing/eco-packaging-mobile.png';
 import Package from '../images/landing/food-packaging.png';
 import EcoPackage from '../images/landing/eco-packaging.png';
 
-const TruckStyle = styled.img`
+const Truck = styled.img`
   max-width: 120px;
 `
 
@@ -38,7 +38,7 @@ const SubHeading = styled.p`
   }
 `
 
-const BackgroundImage = {
+const GreenBackground = {
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
@@ -77,7 +77,7 @@ const GreenButton = styled.div`
 
 function Landing() {
   return (
-    <div style={ BackgroundImage }>
+    <div style={ GreenBackground }>
       <Container>
         <Row>
           <Col lg='6' xl='7'>
@@ -90,7 +90,7 @@ function Landing() {
               <a href='https://deliveroo-packaging.com/collections/eco-packaging'>
                 <GreenButton>Shop eco</GreenButton>
               </a>
-            <TruckStyle src={ Truck } alt='48h Delivery' />
+            <Truck src={ TruckImage } alt='48h Delivery' />
           </Col>
         </Row>
       </Container>

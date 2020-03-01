@@ -6,7 +6,7 @@ import PoundCircle from '../images/banners/pound-circle.png';
 import BinCircle from '../images/banners/bin-circle.png';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const CircleStyle = styled.img`
+const Circle = styled.img`
   max-width: 100px;
   margin: 30px;
 `
@@ -40,26 +40,26 @@ const Section = styled.div`
   }
 `
 
-function FirstSection() {
+function FreeDeliverySection() {
   return (
     <div>
       <Section className='grey-background'>
         <Container>
           <Row className='justify-content-center text-center'>
             <Col md='4'>
-              <CircleStyle src={ TruckCircle } alt='Free Delivery' />
+              <Circle src={ TruckCircle } alt='Free Delivery' />
               <Heading className='d-md-none d-lg-block'>Free delivery</Heading>
               <Heading className='d-none d-md-block d-lg-none'>Free <br />delivery</Heading>
               <SubHeading>We offer next day delivery as standard</SubHeading>
             </Col>
             <Col md='4'>
-              <CircleStyle src={ PoundCircle } alt='Price Promise' />
+              <Circle src={ PoundCircle } alt='Price Promise' />
               <Heading className='d-md-none d-lg-block'>Price promise</Heading>
               <Heading className='d-none d-md-block d-lg-none'>Price <br />promise</Heading>
               <SubHeading>Any profit we make we put back into giving you better pricing</SubHeading>
             </Col>
             <Col md='4'>
-              <CircleStyle src={ BinCircle } alt='Independently Tested' />
+              <Circle src={ BinCircle } alt='Independently Tested' />
               <Heading>Independently tested</Heading>
               <SubHeading>We thoroughly test all our packaging - see our “Roo rating” on every product</SubHeading>
             </Col>
@@ -70,4 +70,4 @@ function FirstSection() {
   );
 }
 
-export default FirstSection;
+export default FreeDeliverySection;

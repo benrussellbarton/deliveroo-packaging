@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
-import SampleImage from '../images/banners/search.jpg';
-import Search from '../images/nav/search.png';
+import SearchImage from '../images/banners/search.jpg';
+import MagnifyingGlass from '../images/nav/search.png';
 import GreenBodyBackground from '../images/banners/background-bottom.svg';
 import { Container, Row, Col, InputGroup, FormControl } from 'react-bootstrap';
 
@@ -18,7 +18,7 @@ const Section = styled.div`
   padding: 0;
 `
 
-const GreenBackground  = {
+const Green  = {
   backgroundColor: '#00CEBC'
 };
 
@@ -29,14 +29,14 @@ const Box = styled.div`
   margin: 25px 0 70px 0;
 `
 
-const Background = {
+const CupBackground = {
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ SampleImage })`
+  backgroundImage: `url(${ SearchImage })`
 };
 
-const BackgroundImage = {
+const GreenBackground = {
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
@@ -58,19 +58,19 @@ function SearchBanner() {
   return (
     <div>
       <Section className='grey-background'>
-      <div style={ BackgroundImage }>
+      <div style={ GreenBackground }>
         <Container>
           <Row className='text-center'>
             <Col>
-              <Box style={ Background }>
+              <Box style={ CupBackground }>
                 <Heading>Now go and find what you need...</Heading>
                 <label style={ Label } className='w-75'>
                   <InputGroup>
                     <FormControl placeholder='What are you looking for?' aria-label='Search' aria-describedby='Search' />
                     <InputGroup.Append>
-                      <InputGroup.Text id='Search' style={ GreenBackground }>
+                      <InputGroup.Text id='Search' style={ Green }>
                         <a href='/'>
-                          <SearchStyle src={ Search } alt='Magnifying Glass' />
+                          <SearchStyle src={ MagnifyingGlass } alt='Magnifying Glass' />
                         </a>
                       </InputGroup.Text>
                     </InputGroup.Append>

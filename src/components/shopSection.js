@@ -1,14 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components';
-import EssentialsCrop from '../images/shop/packaging-essentials-crop.png';
-import SignageCrop from '../images/shop/signage-crop.png';
-import CuisineCrop from '../images/shop/shop-by-cuisine-crop.png';
-import TypeCrop from '../images/shop/shop-by-type-crop.png';
-import Essentials from '../images/shop/packaging-essentials-mob.png';
-import Signage from '../images/shop/signage-mob.png';
-import Cuisine from '../images/shop/shop-by-cuisine-mob.png';
-import Type from '../images/shop/shop-by-type-mob.png';
+import EssentialsDesktop from '../images/shop/packaging-essentials-crop.png';
+import SignageDesktop from '../images/shop/signage-crop.png';
+import CuisineDesktop from '../images/shop/shop-by-cuisine-crop.png';
+import TypeDesktop from '../images/shop/shop-by-type-crop.png';
+import EssentialsMobile from '../images/shop/packaging-essentials-mob.png';
+import SignageMobile from '../images/shop/signage-mob.png';
+import CuisineMobile from '../images/shop/shop-by-cuisine-mob.png';
+import TypeMobile from '../images/shop/shop-by-type-mob.png';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Heading = styled.h3`
@@ -19,60 +19,60 @@ const Heading = styled.h3`
   }
 `
 
-const EssentialsBackground = {
+const EssentialsBackgroundDesktop = {
   backgroundPosition: 'right',
   backgroundSize: '290px',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ EssentialsCrop })`
+  backgroundImage: `url(${ EssentialsDesktop })`
 };
 
-const SignageBackground = {
+const SignageBackgroundDesktop = {
   backgroundPosition: 'right',
   backgroundSize: '290px',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ SignageCrop })`
+  backgroundImage: `url(${ SignageDesktop })`
 };
 
-const CuisineBackground = {
+const CuisineBackgroundDesktop = {
   backgroundPosition: 'right',
   backgroundSize: '290px',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ CuisineCrop })`
+  backgroundImage: `url(${ CuisineDesktop })`
 };
 
-const TypeBackground = {
+const TypeBackgroundDesktop = {
   backgroundPosition: 'right',
   backgroundSize: '290px',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ TypeCrop })`
+  backgroundImage: `url(${ TypeDesktop })`
 };
 
 const EssentialsBackgroundMobile = {
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ Essentials })`
+  backgroundImage: `url(${ EssentialsMobile })`
 };
 
 const SignageBackgroundMobile = {
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ Signage })`
+  backgroundImage: `url(${ SignageMobile })`
 };
 
 const CuisineBackgroundMobile = {
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ Cuisine })`
+  backgroundImage: `url(${ CuisineMobile })`
 };
 
 const TypeBackgroundMobile = {
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
-  backgroundImage: `url(${ Type })`
+  backgroundImage: `url(${ TypeMobile })`
 };
 
 const ListItem = styled.p`
@@ -119,7 +119,7 @@ const CardShadowXS = styled.div`
   margin-bottom: 30px;
 `
 
-const MobileCardImage = styled.div`
+const CardImageMobile = styled.div`
   height: 220px;
 `
 
@@ -130,7 +130,7 @@ function ShopSection() {
         <Container>
           <Row className='justify-content-center'>
             <Col lg='8' xl='6'>
-              <Card style={ EssentialsBackground }>
+              <Card style={ EssentialsBackgroundDesktop }>
                 <Heading className='d-block d-sm-none d-md-block d-xl-none'>Packaging Essentials</Heading>
                 <Heading className='d-none d-sm-block d-md-none d-xl-block'>Packaging<br />Essentials</Heading>
                 <a href='https://deliveroo-packaging.com/cart'>
@@ -148,7 +148,7 @@ function ShopSection() {
               </Card>
             </Col>
             <Col lg='8' xl='6'>
-              <Card style={ TypeBackground }>
+              <Card style={ TypeBackgroundDesktop }>
                 <Heading>Shop by Type</Heading>
                 <a href='https://deliveroo-packaging.com/cart'>
                   <ListItem>Burger / Chips solutions</ListItem>
@@ -174,7 +174,7 @@ function ShopSection() {
               </Card>
             </Col>
             <Col lg='8' xl='6'>
-              <Card style={ CuisineBackground }>
+              <Card style={ CuisineBackgroundDesktop }>
                 <Heading>Shop by Cuisine</Heading>
                 <a href='https://deliveroo-packaging.com/collections/american-burgers'>
                   <ListItem>American / Burgers</ListItem>
@@ -200,7 +200,7 @@ function ShopSection() {
               </Card>
             </Col>
             <Col lg='8' xl='6'>
-              <Card style={ SignageBackground }>
+              <Card style={ SignageBackgroundDesktop }>
                 <Heading>Signage</Heading>
                 <a href='https://deliveroo-packaging.com/collections/internal-signage'>
                   <ListItem>Internal Signage</ListItem>
@@ -222,7 +222,7 @@ function ShopSection() {
           <Row className='justify-content-center text-center'>
             <Col xs='12'>
             <CardShadowXS>
-              <MobileCardImage style={ EssentialsBackgroundMobile }></MobileCardImage>
+              <CardImageMobile style={ EssentialsBackgroundMobile }></CardImageMobile>
               <CardXS>
                 <Heading className='d-block d-sm-none d-md-block d-xl-none'>Packaging Essentials</Heading>
                 <Heading className='d-none d-sm-block d-md-none d-xl-block'>Packaging<br />Essentials</Heading>
@@ -243,7 +243,7 @@ function ShopSection() {
             </Col>
             <Col xs='12'>
               <CardShadowXS>
-                <MobileCardImage style={ TypeBackgroundMobile }></MobileCardImage>
+                <CardImageMobile style={ TypeBackgroundMobile }></CardImageMobile>
                 <CardXS>
                   <Heading>Shop by Type</Heading>
                   <a href='https://deliveroo-packaging.com/cart'>
@@ -272,7 +272,7 @@ function ShopSection() {
             </Col>
             <Col xs='12'>
               <CardShadowXS>
-                <MobileCardImage style={ CuisineBackgroundMobile }></MobileCardImage>
+                <CardImageMobile style={ CuisineBackgroundMobile }></CardImageMobile>
                 <CardXS>
                   <Heading>Shop by Cuisine</Heading>
                   <a href='https://deliveroo-packaging.com/collections/american-burgers'>
@@ -301,7 +301,7 @@ function ShopSection() {
             </Col>
             <Col xs='12'>
               <CardShadowXS>
-                <MobileCardImage style={ SignageBackgroundMobile }></MobileCardImage>
+                <CardImageMobile style={ SignageBackgroundMobile }></CardImageMobile>
                 <CardXS>
                   <Heading>Signage</Heading>
                   <a href='https://deliveroo-packaging.com/collections/internal-signage'>
